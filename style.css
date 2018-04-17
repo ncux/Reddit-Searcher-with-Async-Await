@@ -1,0 +1,13 @@
+
+footer {
+    position: relative;
+    bottom: 0;
+}
+
+li {
+    padding-top: 2rem;
+}
+
+li a {
+    float: right;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit Search App</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://bootswatch.com/4/slate/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="mt-4 text-center dark bg-primary mb-3">
+        <h2 class="text-center">Search Reddit</h2>
+</div>
+<div class="container">
+
+    <form id="form">
+        <div class="form-group">
+        <label for="searchIn" class="form-check-label">
+           Enter search term:
+        </label>
+            <input id="searchIn" type="text" class="form-control">
+        </div>
+        <p id="warning" hidden class="alert alert-danger text-center">Enter a search term.</p>
+
+        <br>
+
+        <div>
+        <h4>Sort results by:</h4>
+        <div class="form-group form-check form-check-inline">
+            <label for="relevance" class="form-check-label">Relevance
+                <input id="relevance" type="radio" name="sortby" value="relevance" checked>
+            </label>
+        </div>
+        <div class="form-group form-check form-check-inline">
+            <label for="latest" class="form-check-label">Latest
+                <input id="latest" type="radio" name="sortby" value="new">
+            </label>
+        </div>
+        </div>
+        <br>
+        <div>
+        <h4>Results limit:</h4>
+         <div id="resultsLimit" class="form-group">
+            <select id="limit" class="" name="limit">
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="80">80</option>
+            </select>
+         </div>
+        </div>
+       <button id="searchBtn" type="submit" class="btn btn-success btn-block">Search</button>
+    </form>
+    <br>
+
+    <ul id="output" class="list-group mb-5"></ul>
+
+</div>
+<footer>
+    <div class="text-center">
+        <span>
+            &copy; 2018 <strong>ncux</strong> <a href="mailto: malabatalent@gmail.com">(malabatalent@gmail.com)</a>
+        </span>
+
+    </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
